@@ -1,0 +1,45 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <img ion-center src="/assets/imgs/logo_movistar_before.jpg" width="200" >
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+
+<ion-card>
+
+  <ion-card-header>
+      <ion-item >
+    <ion-avatar item-start >
+      <img src="/assets/imgs/grupo2.png" >
+    </ion-avatar>
+    <h2>Mis grupos</h2>
+    </ion-item>
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item   (click)='getDetGrup()'>
+      <ion-icon name='home' item-start color="primary"></ion-icon>
+      Casa
+    </button>
+
+    <button ion-item >
+      <ion-icon name='filing' item-start color="secondary"></ion-icon>
+      Trabajo
+    </button>
+  </ion-list>
+    <ion-fab right middle >
+        <button ion-fab color="secondary" (click)='addGrupo()'>
+          <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+
+ 
+</ion-card>
+
+
+
+</ion-content>

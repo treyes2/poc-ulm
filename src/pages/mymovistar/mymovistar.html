@@ -1,0 +1,36 @@
+
+<ion-header>
+
+   <img ion-center src="/assets/imgs/logo_movistar_before.jpg" width="200" >
+    
+</ion-header>
+
+
+<ion-content padding>
+    <div padding>
+        <button ion-button block color="secondary" >Ver todos Mis Productos</button>
+      </div>
+    <ion-list>
+        <button ion-item icon-start>
+          <ion-icon name="phone-portrait" [ngStyle]="{'color': '#0CA9EA'}" item-start></ion-icon>
+          Recarga en linea
+         </button>
+         <button ion-item  (click)="openNavDetailsPage(item)" icon-start>
+            <ion-icon name="globe" [ngStyle]="{'color': '#0CA9EA'}" item-start></ion-icon>
+            Mundo Digital
+           </button>
+           <button ion-item icon-start>
+              <ion-icon  name="albums" [ngStyle]="{'color': '#0CA9EA'}" item-start></ion-icon>
+              Historial de Puntos
+           </button>
+           <button ion-item icon-start>
+              <ion-icon name="list-box" [ngStyle]="{'color':'#0CA9EA'}" item-start></ion-icon>
+               Ofertas y Promociones
+           </button>
+           <button ion-item  icon-start>
+               <ion-icon name="cart" [ngStyle]="{'color': '#0CA9EA'}" item-start></ion-icon>
+                Tienda
+           </button>
+      </ion-list>
+
+</ion-content>
