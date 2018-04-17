@@ -6,7 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-//import { MymovistarPage } from '../pages/mymovistar/mymovistar';
+import { MymovistarPage } from '../pages/mymovistar/mymovistar';
 import { TableroPage } from '../pages/tablero/tablero';
 import { ServiciosPage } from '../pages/servicios/servicios';
 import { GruposPage } from '../pages/grupos/grupos';
@@ -24,7 +24,7 @@ import { Deeplinks } from '@ionic-native/deeplinks';
   declarations: [
     MyApp,
     HomePage,
-   // MymovistarPage,
+   MymovistarPage,
     TableroPage,
     ServiciosPage,
     GruposPage,
@@ -43,7 +43,7 @@ import { Deeplinks } from '@ionic-native/deeplinks';
   entryComponents: [
     MyApp,
     HomePage,
-   // MymovistarPage,
+    MymovistarPage,
     TableroPage,
     ServiciosPage,
     GruposPage,
