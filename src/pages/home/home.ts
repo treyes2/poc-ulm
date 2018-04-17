@@ -55,7 +55,7 @@ export class HomePage {
       //var target = "-_blank"; //abre inapp browser en blanco
       //var target = "_self"; //Abre navegador cordova dentro de la app, sin barra de navegación
       var target = "_system";
-      var options = "location=yes,clearcache=yes";
+      var options = "location=yes";
       let browser =  this.iab.create(url, target, options);
       
       /*
