@@ -12,7 +12,18 @@ import { TableroPage } from '../tablero/tablero';
 })
 export class MymovistarPage {
   items = [];
+
+  fragments: any;
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+    console.log("________PARAMETROS________")
+
+    this.fragments = navParams.get('fragment');
+    this.fragments = this.fragments.split("&");
+    console.log(this.fragments)
+
 
     this.items = [
       {

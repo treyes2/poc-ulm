@@ -28,6 +28,7 @@ export class MyApp {
         // match.$args - the args passed in the link
         // match.$link - the full link data
         console.log('deeplink Successfully matched route', match);
+        this.nav.push(MymovistarPage, match.$link);
       }, (nomatch) => {
         // nomatch.$link - the full link data
         console.error('deeplink que no concuerda', nomatch);
