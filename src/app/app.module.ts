@@ -15,10 +15,16 @@ import { DetGruposPage } from '../pages/det-grupos/det-grupos';
 import { AddContactoPage } from '../pages/add-contacto/add-contacto';
 import { CompartirServicePage } from '../pages/compartir-service/compartir-service';
 import { ConfigurarServicePage } from '../pages/configurar-service/configurar-service';
+import { DatosPage } from '../pages/datos/datos';
+
 import { UsersProvider } from '../providers/usuarios-service/usuarios-service';
 import { HttpModule } from '@angular/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { Deeplinks } from '@ionic-native/deeplinks';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { ProfileServiceProvider } from '../providers/profile-service/profile-service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,12 +38,14 @@ import { Deeplinks } from '@ionic-native/deeplinks';
     DetGruposPage,
     AddContactoPage,
     CompartirServicePage,
-    ConfigurarServicePage
+    ConfigurarServicePage,
+    DatosPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,13 +59,15 @@ import { Deeplinks } from '@ionic-native/deeplinks';
     DetGruposPage,
     AddContactoPage,
     CompartirServicePage,
-    ConfigurarServicePage
+    ConfigurarServicePage,
+    DatosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsersProvider,InAppBrowser,Deeplinks
+    UsersProvider,InAppBrowser,Deeplinks,NativeStorage,
+    ProfileServiceProvider
   ]
 })
 export class AppModule {}

@@ -9,8 +9,10 @@ import { ConfigurarServicePage } from '../configurar-service/configurar-service'
   templateUrl: 'servicios.html',
 })
 export class ServiciosPage {
-
+  servicios: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+      this.servicios = navParams.get("servicios");
+      //console.log("this.servicios = "+this.servicios);
   }
 
   ionViewDidLoad() {

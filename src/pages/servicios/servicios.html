@@ -17,7 +17,7 @@
       <h2>Mis servicios</h2>
      </ion-item>
     
-     <ion-item>
+     <!--ion-item>
         <ion-thumbnail item-start>
           <img src="./assets/imgs/napster-logo.jpg">
         </ion-thumbnail>
@@ -56,7 +56,11 @@
                             
                 <button ion-button clear item-end (click)='compartir()'>Compartir</button>
                 <button ion-button clear item-end (click)='configurar()'>Configurar</button>
-              </ion-item>
+              </ion-item-->
+    </ion-list>
+
+    <ion-list *ngIf="servicios">
+      <ion-card *ngFor="let servicio of servicios">{{servicio}}</ion-card>
     </ion-list>
 
 </ion-content>

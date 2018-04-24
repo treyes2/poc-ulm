@@ -6,15 +6,18 @@ import { HomePage } from '../pages/home/home';
 import { Deeplinks } from '@ionic-native/deeplinks';
 import { MymovistarPage } from '../pages/mymovistar/mymovistar';
 
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = HomePage;
-
+  
   @ViewChild(Nav) nav:Nav;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, deeplink: Deeplinks ) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, deeplink: Deeplinks) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

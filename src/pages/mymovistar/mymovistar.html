@@ -2,7 +2,7 @@
 <ion-header>
 
    <img ion-center src="./assets/imgs/logo_movistar_before.jpg" width="200" >
-    
+    <h5>Hola {{name}} {{name2}} {{apePaterno}}</h5>
 </ion-header>
 
 
@@ -33,8 +33,5 @@
            </button>
       </ion-list>
 
-      <ion-list *ngIf="fragments">
-        <ion-card *ngFor="let fragment of fragments">{{ fragment }}</ion-card>
-      </ion-list>
-
+    
 </ion-content>

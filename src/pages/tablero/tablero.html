@@ -3,12 +3,18 @@
 
   <ion-navbar>
       <img ion-center src="./assets/imgs/logo_movistar_before.jpg"  width="200" >
+      <h5>{{name}} {{name2}}</h5>
  </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+    <!--h5>Parámetros recibidos:</h5>
+    <p>Texto recibido: {{unTextoRecibido}}</p>
+    <p>Número recibido: {{unNombreRecibido}}</p-->
+
     <ion-list>
         <button ion-item icon-start (click)="openServiciosPage()" >
           <ion-avatar item-start >
@@ -31,12 +37,15 @@
             <h2>Mis dispositivos</h2>
            
           </button>
-          <button ion-item icon-start>
+          <button ion-item icon-start (click)="getDatosPage()">
             <ion-avatar item-start >
                 <img src="./assets/imgs/data.png" >
               </ion-avatar>
               <h2>Mi datos</h2>
             
           </button>
+      </ion-list>
+      <ion-list *ngIf="profiles">
+        <ion-card *ngFor="let profile of profiles">{{ profile }}</ion-card>
       </ion-list>
 </ion-content>
